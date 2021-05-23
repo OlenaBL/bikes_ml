@@ -23,14 +23,14 @@ def main():
     if flask.request.method == 'POST':
         # Extract the input
         text = flask.request.form['text']
-        text = [text]
+        #text = [text]
         #humidity = flask.request.form['humidity']
         #windspeed = flask.request.form['windspeed']
 
         # Make DataFrame for model
-        input_variables = pd.DataFrame([text], #humidity, windspeed]], 
+        input_variables = pd.DataFrame([[text]], #humidity, windspeed]], 
                                        columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       #dtype=float,
+                                       dtype=np.array,
                                        index=['input'])
         
         #input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
