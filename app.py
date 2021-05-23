@@ -23,7 +23,7 @@ def main():
     if flask.request.method == 'POST':
         # Extract the input
         text = flask.request.form['text']
-        text = float(text)
+        text = [text]
         #humidity = flask.request.form['humidity']
         #windspeed = flask.request.form['windspeed']
 
