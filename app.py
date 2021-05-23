@@ -30,11 +30,11 @@ def main():
         # Make DataFrame for model
         input_variables = pd.DataFrame([text], #humidity, windspeed]], 
                                        columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       dtype=string,
+                                       #dtype=float,
                                        index=['input'])
         
         #input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
-        input_variables['text'] = input_variables['text'].astype(float)
+        #input_variables['text'] = input_variables['text'].astype(float)
 
         # Get the model's prediction
         prediction = model.predict(input_variables)[0]
