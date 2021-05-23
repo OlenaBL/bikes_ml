@@ -1,6 +1,7 @@
 import flask
 import pickle
 import pandas as pd
+import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 from numpy.core.arrayprint import dtype_is_implied
 
