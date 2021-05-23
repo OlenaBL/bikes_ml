@@ -30,6 +30,7 @@ def main():
                                        index=['input'])
         
         #input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
+        input_variables['text'] = input_variables['text'].astype(float)
 
         # Get the model's prediction
         prediction = model.predict(input_variables)[0]
