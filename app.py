@@ -25,7 +25,7 @@ def main():
         # Make DataFrame for model
         input_variables = pd.DataFrame([text], #humidity, windspeed]],
                                        columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       dtype=float,
+                                       #dtype=float,
                                        index=['input'])
 
         # Get the model's prediction
