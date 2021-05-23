@@ -45,7 +45,7 @@ def main():
                                      original_input={'text':text},
                                                      #'Humidity':humidity,
                                                      #'Windspeed':windspeed},
-                                     result=prediction,
+                                     result=clf,
                                      )
 
 if __name__ == '__main__':
