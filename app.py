@@ -19,16 +19,17 @@ def main():
     if flask.request.method == 'POST':
         # Extract the input
         text = flask.request.form['text']
+        text = float(text)
         #humidity = flask.request.form['humidity']
         #windspeed = flask.request.form['windspeed']
 
         # Make DataFrame for model
-        #input_variables = pd.DataFrame([text].astype(float), #humidity, windspeed]],
-                                       #columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       #dtype=float,
-                                       #index=['input'])
+        input_variables = pd.DataFrame([text], #humidity, windspeed]], 
+                                       columns=['text'], #'temperature', 'humidity', 'windspeed'],
+                                       dtype=float,
+                                       index=['input'])
         
-        input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
+        #input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
 
         # Get the model's prediction
         prediction = model.predict(input_variables)[0]
