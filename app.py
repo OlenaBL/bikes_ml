@@ -23,9 +23,9 @@ def main():
         #windspeed = flask.request.form['windspeed']
 
         # Make DataFrame for model
-        input_variables = pd.DataFrame([[text]], #humidity, windspeed]],
+        input_variables = pd.DataFrame(loat([[text]]), #humidity, windspeed]],
                                        columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       #dtype=np.float,
+                                       dtype=float,
                                        index=['input'])
 
         # Get the model's prediction
