@@ -26,7 +26,7 @@ def main():
         # Make DataFrame for model
         input_variables = pd.DataFrame([text], #humidity, windspeed]], 
                                        columns=['text'], #'temperature', 'humidity', 'windspeed'],
-                                       dtype=float,
+                                       dtype=string,
                                        index=['input'])
         
         #input_variables = pd.DataFrame(text, index=['input'], columns=['text'])
