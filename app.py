@@ -18,14 +18,14 @@ def main():
     
     if flask.request.method == 'POST':
         # Extract the input
-        temperature = flask.request.form['temperature']
-        humidity = flask.request.form['humidity']
-        windspeed = flask.request.form['windspeed']
+        text = flask.request.form['text']
+        #humidity = flask.request.form['humidity']
+        #windspeed = flask.request.form['windspeed']
 
         # Make DataFrame for model
-        input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
-                                       columns=['temperature', 'humidity', 'windspeed'],
-                                       dtype=float,
+        input_variables = pd.DataFrame([text], #humidity, windspeed]],
+                                       columns=['text'], #'temperature', 'humidity', 'windspeed'],
+                                       dtype=str,
                                        index=['input'])
 
         # Get the model's prediction
@@ -34,9 +34,9 @@ def main():
         # Render the form again, but add in the prediction and remind user
         # of the values they input before
         return flask.render_template('main.html',
-                                     original_input={'Temperature':temperature,
-                                                     'Humidity':humidity,
-                                                     'Windspeed':windspeed},
+                                     original_input={'text':text,
+                                                     #'Humidity':humidity,
+                                                     #'Windspeed':windspeed},
                                      result=prediction,
                                      )
 
